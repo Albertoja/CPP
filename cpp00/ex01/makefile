@@ -1,4 +1,4 @@
-SRCS	= main.cpp
+SRCS	= main.cpp class_contact.cpp class_phonebook.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
@@ -6,7 +6,7 @@ SRCSB	=
 
 OBJB	= ${SRCSB:.cpp=.o}
 
-NAME	= megaphone
+NAME	= phonebook
 
 CXX	= clang++
 
