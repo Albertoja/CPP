@@ -21,6 +21,8 @@ void Contact :: search_info()
 
 bool	Contact::createcontact(void)
 {
+	size_t	i = 0;
+
 	std::cout << "Data of the new contact:\n\n";
 	std::cout << "First Name: ";
 	std::getline(std::cin, _first_name);
@@ -28,8 +30,23 @@ bool	Contact::createcontact(void)
 	std::getline(std::cin, _last_name);
 	std::cout << "Nickname: ";
 	std::getline(std::cin, _nickname);
-	std::cout << "Phone Number: ";
-	std::getline(std::cin, _phone_number);
+	while(1)
+	{
+		std::cout << "Phone Number: ";
+		std::getline(std::cin, _phone_number);
+		i = 0;
+		while(_phone_number[i])
+		{
+			if (!isdigit(_phone_number[i]))
+				{
+					std::cout << "\nERROR: only numbers please\n\n";
+					break;
+				}
+			i++;
+		}
+		if (i >= strlen(_phone_number.c_str()))
+			break;
+	}
 	std::cout << "Darkest Secret: ";
 	std::getline(std::cin, _darkest_secret);
 	std::cout << "\n\n" << _nickname << " saved as a contact!\n\n" << std::endl;
