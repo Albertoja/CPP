@@ -7,7 +7,6 @@
 #include "class_contact.hpp"
 #include "class_phonebook.hpp"
 
-
 int	main()
 {
 	PhoneBook Phone;
@@ -23,10 +22,10 @@ int	main()
 	std::cout << "------------------------" << std::endl;
 	std::cout << "------------------------" << std::endl;
 	sleep(1);
-	std::cout << "USE THESE COMMANDS: " << std::endl;
-	std::cout << "-> ADD (TO ADD A CONTACT) \n-> SEARCH (TO SEARCH A CONTACT) \n-> EXIT (TO EXIT THE PROGRAM)\n" << std::endl;
 	while(1)
 	{
+		std::cout << "USE THESE COMMANDS: " << std::endl;
+		std::cout << "-> ADD (TO ADD A CONTACT) \n-> SEARCH (TO SEARCH A CONTACT) \n-> EXIT (TO EXIT THE PROGRAM)\n" << std::endl;
 		if (!std::getline(std::cin, input))
 			break ;
 		if (!input.compare("ADD"))
@@ -39,6 +38,6 @@ int	main()
 		else if (!input.compare("EXIT"))
 			break;
 		else
-			std::cout << "Error\n";
+			std::cout << "Error: use the allowed commands please \n\n";
 	}
 }

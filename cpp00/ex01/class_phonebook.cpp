@@ -6,7 +6,7 @@ PhoneBook::~PhoneBook(void){}
 
 void	PhoneBook::add(void)
 {
-	if (_i == 8)
+	if (_i >= 8)
 		_i = 0;
 	if (_phbook[_i].createcontact())
 		_i++;
@@ -17,8 +17,14 @@ void	PhoneBook::search(void)
 	int j;
 	std::string	input;
 
+	j = 1;
+	if (!_phbook[0].checkcontact())
+	{
+		std::cout << "Error: the PhoneBook is empty!"<< std::endl << std::endl;
+		return ;
+	}
 	std::cout << "Index|First Name| Last Name|  Nickname"<< std::endl;
-	for (j = 1; j <= _i; j++)
+	for (j = 1; j <= 8; j++)
 	{
 		std::cout << std::setw(5) << j << "|";
 		_phbook[j - 1].printindex();
@@ -37,6 +43,4 @@ void	PhoneBook::search(void)
 			break ;
 		}
 	}
-	std::cout << "USE THESE COMMANDS: " << std::endl;
-	std::cout << "-> ADD (TO ADD A CONTACT) \n-> SEARCH (TO SEARCH A CONTACT) \n-> EXIT (TO EXIT THE PROGRAM)\n" << std::endl;
 }

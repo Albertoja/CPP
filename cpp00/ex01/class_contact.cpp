@@ -4,14 +4,12 @@ Contact::Contact(void){}
 
 Contact::~Contact(void){}
 
-// Contact :: Contact(std::string first, std::string last, std::string nick, std::string phone, std::string dark)
-// {
-// 	_first_name = first;
-// 	_last_name = last;
-// 	_nickname = nick;
-// 	_phone_number = phone;
-// 	_darkest_secret = dark;
-// }
+bool	ft_error(std::string str)
+{
+	std::cout << "ERROR: ";
+	std::cout << str << std::endl << std::endl;
+	return(false);
+}
 
 void Contact :: search_info()
 {
@@ -25,42 +23,45 @@ bool	Contact::createcontact(void)
 
 	std::cout << "Data of the new contact:\n\n";
 	std::cout << "First Name: ";
-	std::getline(std::cin, _first_name);
+	if (!std::getline(std::cin, _first_name) || !_first_name[0])
+		return(ft_error("you can't leave it empty"));
 	std::cout << "Last Name: ";
-	std::getline(std::cin, _last_name);
+	if (!std::getline(std::cin, _last_name) || !_last_name[0])
+		return(ft_error("you can't leave it empty"));
 	std::cout << "Nickname: ";
-	std::getline(std::cin, _nickname);
+	if (!std::getline(std::cin, _nickname) || !_nickname[0])
+		return(ft_error("you can't leave it empty"));
 	while(1)
 	{
 		std::cout << "Phone Number: ";
-		std::getline(std::cin, _phone_number);
+		if(!std::getline(std::cin, _phone_number) || !_phone_number[0])
+			return(ft_error("you can't leave it empty"));
 		i = 0;
 		while(_phone_number[i])
 		{
 			if (!isdigit(_phone_number[i]))
 				{
-					std::cout << "\nERROR: only numbers please\n\n";
-					break;
+					std::cout << "\nERROR: only numbers please\n";
+					break ;
 				}
 			i++;
 		}
 		if (i >= strlen(_phone_number.c_str()))
-			break;
+			break ;
 	}
 	std::cout << "Darkest Secret: ";
-	std::getline(std::cin, _darkest_secret);
+	if (!std::getline(std::cin, _darkest_secret) || !_darkest_secret[0])
+		return(ft_error("you can't leave it empty"));
 	std::cout << "\n\n" << _nickname << " saved as a contact!\n\n" << std::endl;
 	sleep(1);
-	std::cout << "USE THESE COMMANDS: " << std::endl;
-	std::cout << "-> ADD (TO ADD A CONTACT) \n-> SEARCH (TO SEARCH A CONTACT) \n-> EXIT (TO EXIT THE PROGRAM)\n" << std::endl;
-	return (true);
+	return (true) ;
 }
 
 bool	Contact::checkcontact(void)
 {
 	if (_first_name.empty())
 		return (false);
-	return (true);
+	return (true) ;
 }
 
 void	Contact::printcontact(void)
@@ -87,6 +88,4 @@ void	Contact::printindex(void)
 		std::cout << _nickname.substr(0, 9) << ".|";
 	else
 	std::cout << std::setw(10) << _nickname << "|";
-	// std::cout << std::setw(10) << _phone_number << "|";
-	// std::cout << std::setw(10) << _darkest_secret << "|";
 }
