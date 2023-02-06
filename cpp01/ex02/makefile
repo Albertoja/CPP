@@ -1,4 +1,6 @@
-SRCS	= main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
+
+
+SRCS	= main.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
@@ -6,7 +8,7 @@ SRCSB	=
 
 OBJB	= ${SRCSB:.cpp=.o}
 
-NAME	= zombie
+NAME	= brain
 
 CXX	= clang++
 
@@ -32,3 +34,7 @@ fclean: 	clean
 				${RM} ${NAME}
 
 re: 		fclean all
+
+rebonus:	fclean bonus
+
+.PHONY:		all bonus clean fclean re rebonus

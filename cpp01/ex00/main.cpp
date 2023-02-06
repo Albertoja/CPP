@@ -1,18 +1,17 @@
 #include "Zombie.hpp"
 
+// void    leaks(void)
+// {
+//     system("leaks zombie");
+// }
+
 int	main()
 {
 	Zombie *zombie;
 
-
+	//atexit(leaks);
 	zombie = newZombie("Alan");
 	zombie->announce();
 	delete zombie;
-	zombie = new Zombie;
-	zombie->announce();
-	delete zombie;
 	randomChump("Alan2");
-	Zombie Zombstack;
-	Zombstack.zombiename("Alan3");
-	Zombstack.announce();
 }
