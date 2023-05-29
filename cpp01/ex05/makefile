@@ -1,6 +1,4 @@
-
-
-SRCS	= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRCS	= main.cpp Harl.cpp
 
 OBJS	= ${SRCS:.cpp=.o}
 
@@ -8,7 +6,7 @@ SRCSB	=
 
 OBJB	= ${SRCSB:.cpp=.o}
 
-NAME	= violence
+NAME	= harl
 
 CXX	= clang++
 
