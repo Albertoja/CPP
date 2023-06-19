@@ -6,7 +6,7 @@
 /*   By: aespinos <aespinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/26 08:37:58 by aespinos          #+#    #+#             */
-/*   Updated: 2023/06/15 18:17:48 by aespinos         ###   ########.fr       */
+/*   Updated: 2023/06/19 16:21:56 by aespinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,6 @@ return 0;
 	// 	delete dog;
 	// 	dog2->getBrain()->printIdeas();
 	// 	delete dog2;
-	// 	system("leaks brain");
+	// 	//system("leaks brain");
 	// }
 }

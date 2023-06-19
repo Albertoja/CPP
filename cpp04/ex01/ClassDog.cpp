@@ -6,7 +6,7 @@
 /*   By: aespinos <aespinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 19:34:58 by aespinos          #+#    #+#             */
-/*   Updated: 2023/06/15 17:55:14 by aespinos         ###   ########.fr       */
+/*   Updated: 2023/06/19 16:12:27 by aespinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Dog::Dog(const Dog &other) : _brain(new Brain(*other.getBrain()))
 Dog::~Dog(void)
 {
 	delete _brain;
-	std::cout << "You have killed a cat, bad human" << std::endl;
+	std::cout << "You have killed a dog, bad human" << std::endl;
 }
 
 Dog	&Dog::operator=(const Dog &other)

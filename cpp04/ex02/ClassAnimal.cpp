@@ -6,7 +6,7 @@
 /*   By: aespinos <aespinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/09 19:35:08 by aespinos          #+#    #+#             */
-/*   Updated: 2023/06/15 17:42:04 by aespinos         ###   ########.fr       */
+/*   Updated: 2023/06/19 16:20:21 by aespinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 Animal::Animal(void) : _type("unknown animal")
 {
-	std::cout << "I'm an unknown animal. Hello!"<< std::endl;
+	std::cout << "I'm an unknown animal. Hello! (animal constructor)"<< std::endl;
 }
 
 Animal::Animal(std::string const type) : _type(type)
 {
 	if (_type.empty())
 		_type = "unknown animal";
-	std::cout << "I'm a " << _type << ". Hello!"<< std::endl;
+	std::cout << "I'm a " << _type << ". Hello! (animal constructor)"<< std::endl;
 }
 
 Animal::Animal(const Animal &other)
