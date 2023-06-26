@@ -6,7 +6,7 @@
 /*   By: aespinos <aespinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:19:35 by aespinos          #+#    #+#             */
-/*   Updated: 2023/06/19 17:27:39 by aespinos         ###   ########.fr       */
+/*   Updated: 2023/06/19 18:52:59 by aespinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	main(void)
 	std::cout << bur << std::endl;
 	try
 	{
-		bur.decrementGrade(11);
+		bur.decrementGrade(1);
 	}
 	catch (std::exception &e)
 	{

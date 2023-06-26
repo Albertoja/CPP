@@ -6,7 +6,7 @@
 /*   By: aespinos <aespinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 18:46:36 by aespinos          #+#    #+#             */
-/*   Updated: 2023/06/15 18:46:37 by aespinos         ###   ########.fr       */
+/*   Updated: 2023/06/20 19:20:04 by aespinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@
 
 Form::Form(void) : _name("unknown form"), _sgrade(1), _egrade(1), _signed(false) {}
 
-Form::Form(std::string const name, int sgrade, int egrade) :
-_name(name), _sgrade(sgrade), _egrade(egrade), _signed(false)
+Form::Form(std::string const name, int sgrade, int egrade) : _name(name), _sgrade(sgrade), _egrade(egrade), _signed(false)
 {
 	if (_sgrade > 150 || _egrade > 150)
 		throw (GradeTooLowException());

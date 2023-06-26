@@ -6,7 +6,7 @@
 /*   By: aespinos <aespinos@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 17:51:28 by aespinos          #+#    #+#             */
-/*   Updated: 2023/06/20 19:21:36 by aespinos         ###   ########.fr       */
+/*   Updated: 2023/06/20 19:29:26 by aespinos         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,3 +48,8 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
                "                       {{}               " << std::endl; 
     outfile.close();       
 }                
+
+Form	*ShrubberyCreationForm::newShrubbery(std::string const target)
+{
+	return (new ShrubberyCreationForm(target));
+}
